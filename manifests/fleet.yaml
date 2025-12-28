@@ -1,0 +1,6 @@
+namespace: default
+targets:
+- name: local
+  clusterSelector:
+    matchLabels:
+      fleet.cattle.io/cluster: local
