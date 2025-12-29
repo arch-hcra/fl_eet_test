@@ -1,0 +1,14 @@
+apiVersion: crd.projectcalico.org/v1
+kind: NetworkPolicy
+metadata:
+  name: test-app-policy
+  namespace: default
+spec:
+  selector: app == 'test-app'
+  ingress:
+  - action: Allow
+    protocol: TCP
+    destination:
+      ports: [80]
+  egress:
+  - action: Allow
